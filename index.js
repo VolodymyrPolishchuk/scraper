@@ -2,7 +2,7 @@ const Promise = require('bluebird');
 const SerpApi = require('google-search-results-nodejs');
 const puppeteer = require('puppeteer');
 
-const API_KEY = "7527d0d30b30854373c19796cc1b932488a30bc81b92037fcaed72fda33851d5"
+const API_KEY = ""
 class Scraper {
     
     constructor() {
