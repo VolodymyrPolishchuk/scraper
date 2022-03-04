@@ -2,20 +2,17 @@ const Promise = require('bluebird');
 const SerpApi = require('google-search-results-nodejs');
 const puppeteer = require('puppeteer');
 
-const API_KEY = ""
+const API_KEY = "7527d0d30b30854373c19796cc1b932488a30bc81b92037fcaed72fda33851d5"
 class Scraper {
     
     constructor() {
         this.serp = Promise.promisifyAll(new SerpApi.GoogleSearch(API_KEY));
-        this.serpPr = Promise.promisifyAll(this.serp);
     };
 
     async scrape() {
         console.log(`-----------1`);
-        console.log(JSON.stringify(this.serp));
-        console.log(JSON.stringify(this.serpPr));
 
-        const result = await this.serp.json({
+        const result = await this.serp.jsonAsync({
             q: "Coffee",
             location: "Austin, TX"
         });
